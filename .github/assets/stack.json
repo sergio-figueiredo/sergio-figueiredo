@@ -1,7 +1,7 @@
 {
  "GRUPOS": [
   [
-   "Linguagens",
+   "Languages",
    [
     "Java",
     "Kotlin",
@@ -22,7 +22,7 @@
    ]
   ],
   [
-   "Front",
+   "Front-end",
    [
     "React",
     "HTML5",
@@ -30,7 +30,7 @@
    ]
   ],
   [
-   "Backend e integração",
+   "Backend and integration",
    [
     "Quarkus",
     "Spring",
@@ -39,14 +39,14 @@
    ]
   ],
   [
-   "IA",
+   "AI",
    [
     "Anthropic",
     "LangChain"
    ]
   ],
   [
-   "Dados",
+   "Data",
    [
     "Oracle",
     "Cassandra",
@@ -59,7 +59,7 @@
    ]
   ],
   [
-   "Plataforma e entrega",
+   "Platform and delivery",
    [
     "Kubernetes",
     "OpenShift",
@@ -71,7 +71,7 @@
    ]
   ],
   [
-   "Infraestrutura como código",
+   "Infrastructure as code",
    [
     "Proxmox",
     "OpenTofu",
@@ -80,7 +80,7 @@
    ]
   ],
   [
-   "Observabilidade",
+   "Observability",
    [
     "OpenTelemetry",
     "Grafana",
@@ -89,7 +89,7 @@
    ]
   ],
   [
-   "Nuvem",
+   "Cloud",
    [
     "Cloudflare",
     "AWS",
@@ -100,7 +100,7 @@
    ]
   ],
   [
-   "Código e ferramentas",
+   "Code and tools",
    [
     "Git",
     "GitHub",

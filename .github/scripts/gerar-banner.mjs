@@ -84,8 +84,8 @@ const chips = CHIPS.map(([nome, cor]) => {
 
 const svg = `<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
      width="${L}" height="${A}" viewBox="0 0 ${L} ${A}" role="img"
-     aria-label="Sérgio Travassos — Principal Engineer na Timestamp, Lisboa">
-  <title>Sérgio Travassos — Principal Engineer</title>
+     aria-label="Sérgio Figueirêdo — Principal Engineer at Timestamp, Lisbon">
+  <title>Sérgio Figueirêdo — Principal Engineer</title>
   <defs>
     <linearGradient id="quente" x1="0" y1="0" x2="1" y2="1">
       <stop offset="0" stop-color="${ROSA}"/>
@@ -131,17 +131,17 @@ const svg = `<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.
     <!-- o texto -->
     <g transform="translate(300, 0)">
       <text x="0" y="158" fill="#FFFFFF" font-size="40" font-weight="800"
-            font-family="${LETRA}" letter-spacing="-0.5">Sérgio Travassos</text>
+            font-family="${LETRA}" letter-spacing="-0.5">Sérgio Figueirêdo</text>
       <rect x="0" y="174" width="330" height="3" rx="1.5" fill="url(#fio)"/>
 
       <text x="0" y="206" fill="#FFFFFF" font-size="16" font-weight="700" font-family="${LETRA}">
-        Principal Engineer<tspan fill="#B9AEC4" font-weight="400"> · Timestamp · Lisboa</tspan>
+        Principal Engineer<tspan fill="#B9AEC4" font-weight="400"> · Timestamp · Lisbon</tspan>
       </text>
       <text x="0" y="230" fill="#B9AEC4" font-size="13.5" font-family="${LETRA}">
-        Arquiteturas de microserviços para sistemas de muita carga,
+        Microservice architectures for high-load systems,
       </text>
       <text x="0" y="249" fill="#B9AEC4" font-size="13.5" font-family="${LETRA}">
-        e as equipas que as constroem. Mais de 10 anos em Java.
+        and the teams that build them. 10+ years of Java.
       </text>
 
       <g transform="translate(0, 266)">

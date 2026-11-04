@@ -97,15 +97,15 @@ const ordenadas = [...bytes.entries()].sort((a, b) => b[1] - a[1]);
 const principais = ordenadas.slice(0, TOP);
 const restoBytes = ordenadas.slice(TOP).reduce((a, [, v]) => a + v, 0);
 const linhas = restoBytes > 0
-  ? [...principais, ['Outras', restoBytes]]
+  ? [...principais, ['Other', restoBytes]]
   : principais;
-if (restoBytes > 0) cores.set('Outras', '#8b949e');
+if (restoBytes > 0) cores.set('Other', '#8b949e');
 
 const anos = new Date().getUTCFullYear() - new Date(u.createdAt).getUTCFullYear();
 const factos = [
-  `${u.contributionsCollection.contributionCalendar.totalContributions} contribuições no último ano`,
-  `${u.repositories.totalCount} repositórios`,
-  `no GitHub há ${anos} anos`,
+  `${u.contributionsCollection.contributionCalendar.totalContributions} contributions in the last year`,
+  `${u.repositories.totalCount} repositories`,
+  `on GitHub for ${anos} years`,
 ].join('  ·  ');
 
 /* ── 2. O desenho ──────────────────────────────────────────────
@@ -174,8 +174,8 @@ function cartao(tema) {
 
   return `<svg xmlns="http://www.w3.org/2000/svg" width="${L}" height="${A}"
      viewBox="0 0 ${L} ${A}" role="img"
-     aria-label="Linguagens de ${escapar(u.name)} por volume de código">
-  <title>Linguagens de ${escapar(u.name)}</title>
+     aria-label="${escapar(u.name)}'s languages by code volume">
+  <title>${escapar(u.name)}'s languages</title>
   <defs>
     <!-- Arredonda as DUAS pontas da barra. Um rx na primeira fatia só
          arredondava a esquerda, e a direita ficava em esquadria. -->
@@ -187,7 +187,7 @@ function cartao(tema) {
         fill="${t.fundo}" stroke="${t.borda}"/>
   <g transform="translate(${M}, 0)">
     <text x="0" y="38" fill="${t.titulo}" font-size="16" font-weight="600"
-          font-family="${LETRA}">Onde o código passa o tempo</text>
+          font-family="${LETRA}">Where the code spends its time</text>
     <text x="0" y="58" fill="${t.texto}" font-size="12" font-family="${LETRA}">${escapar(factos)}</text>
     <g clip-path="url(#barra)">
       <rect x="0" y="${BARRA_Y}" width="${UTIL}" height="${BARRA_H}" fill="${t.trilho}"/>

@@ -69,10 +69,10 @@ function tintaSobre(hex) {
 /* ── títulos ─────────────────────────────────────────────────── */
 
 const TITULOS = [
-  ['projetos', 'O que ando a construir'],
-  ['certificacoes', 'Certificações'],
+  ['projetos', "What I'm building"],
+  ['certificacoes', 'Certifications'],
   ['stack', 'Stack'],
-  ['contacto', 'Onde me encontrar'],
+  ['contacto', 'Find me'],
 ];
 
 function titulo(texto) {
@@ -99,18 +99,18 @@ function titulo(texto) {
 
 const CARTOES = [
   {
-    cor: '#C9A227', titulo: 'Esposas Literárias', etiqueta: 'NO AR',
-    texto: 'A plataforma de um clube de leitura com mais de 400 leitoras. Um Worker de Cloudflare sobre D1, e três apps que o consomem: iPhone nativo, Android nativo e a app web.',
+    cor: '#C9A227', titulo: 'Esposas Literárias', etiqueta: 'LIVE',
+    texto: 'A book club platform with over 400 readers. A Cloudflare Worker on D1, and three apps that consume it: native iPhone, native Android and the web app.',
     chips: ['Swift', 'Kotlin', 'JS', 'Cloudflare'],
   },
   {
-    cor: '#844FBA', titulo: 'homelab', etiqueta: 'PÚBLICO',
-    texto: 'Um nó Proxmox, tudo em Git: OpenShift SNO, Kafka, GPU em passthrough, VLANs e GitOps. Se uma máquina não se recria do repositório, não conta.',
+    cor: '#844FBA', titulo: 'homelab', etiqueta: 'PUBLIC',
+    texto: 'A single Proxmox node, all in Git: OpenShift SNO, Kafka, GPU passthrough, VLANs and GitOps. If a machine can\'t be rebuilt from the repo, it doesn\'t count.',
     chips: ['Proxmox', 'OpenTofu', 'Ansible'],
   },
   {
     cor: '#EE0000', titulo: 'Red Hat · AD221 · DO288 · DO180', etiqueta: 'LABS',
-    texto: 'Integração cloud-native com Red Hat Fuse, e as aplicações dos cursos de OpenShift.',
+    texto: 'Cloud-native integration with Red Hat Fuse, plus the apps from the OpenShift courses.',
     chips: ['Fuse', 'OpenShift', 'Camel'],
   },
 ];
@@ -179,7 +179,7 @@ const AC = 198 + (Math.max(...CARTOES.map(filasDe)) - 1) * 26;
 const projetos = `<svg xmlns="http://www.w3.org/2000/svg" width="${L}" height="${AC}"
      viewBox="0 0 ${L} ${AC}" role="img"
      aria-label="${esc(CARTOES.map((c) => `${c.titulo}: ${c.texto}`).join(' '))}">
-  <title>Projetos</title>
+  <title>Projects</title>
   <defs>
 ${CARTOES.map((_, i) => `    <clipPath id="m${i}"><rect width="${LC}" height="${AC}" rx="12"/></clipPath>`).join('\n')}
   </defs>
@@ -190,10 +190,10 @@ ${CARTOES.map((c, i) => cartao(c, AC, i * (LC + GAP), i)).join('\n')}
 /* ── certificações ───────────────────────────────────────────── */
 
 const CERTS = [
-  { chave: 'Red Hat', texto: 'Certified Specialist in API Management', nota: '2024 · válida até 2027' },
+  { chave: 'Red Hat', texto: 'Certified Specialist in API Management', nota: '2024 · valid until 2027' },
   { chave: 'Anthropic', texto: 'AI Fluency Framework & Foundations · Claude 101 · Claude Code in Action', nota: '2026' },
 ];
-const RODAPE = 'Também: Cloud Fundamentals, Administration and Solution Architect (FIAP) e Java Spring (DevSuperior).';
+const RODAPE = 'Also: Cloud Fundamentals, Administration and Solution Architect (FIAP) and Java Spring (DevSuperior).';
 
 const ACERT = 22 + CERTS.length * 48 + 26;
 
@@ -207,7 +207,7 @@ const COLTILE = Math.max(...CERTS.map((c) => larguraTile(c.chave)));
 const certs = `<svg xmlns="http://www.w3.org/2000/svg" width="${L}" height="${ACERT}"
      viewBox="0 0 ${L} ${ACERT}" role="img"
      aria-label="${esc(CERTS.map((c) => `${c.chave}: ${c.texto}, ${c.nota}`).join('. ') + '. ' + RODAPE)}">
-  <title>Certificações</title>
+  <title>Certifications</title>
   <defs>
     <linearGradient id="pc" x1="0" y1="0" x2="1" y2="1">
       <stop offset="0" stop-color="${PAINEL2}"/><stop offset="1" stop-color="${PAINEL}"/>
