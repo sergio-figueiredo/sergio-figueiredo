@@ -36,10 +36,6 @@ const PERGUNTA = `
 query($login: String!) {
   user(login: $login) {
     name
-    createdAt
-    contributionsCollection {
-      contributionCalendar { totalContributions }
-    }
     repositories(first: 100, ownerAffiliations: OWNER, isFork: false) {
       totalCount
       nodes {
@@ -102,7 +98,6 @@ const linhas = restoBytes > 0
 if (restoBytes > 0) cores.set('Other', '#8b949e');
 
 const factos = [
-  `${u.contributionsCollection.contributionCalendar.totalContributions} contributions in the last year`,
   `${u.repositories.totalCount} repositories`,
 ].join('  ·  ');
 
