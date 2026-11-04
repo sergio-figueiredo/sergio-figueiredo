@@ -101,11 +101,9 @@ const linhas = restoBytes > 0
   : principais;
 if (restoBytes > 0) cores.set('Other', '#8b949e');
 
-const anos = new Date().getUTCFullYear() - new Date(u.createdAt).getUTCFullYear();
 const factos = [
   `${u.contributionsCollection.contributionCalendar.totalContributions} contributions in the last year`,
   `${u.repositories.totalCount} repositories`,
-  `on GitHub for ${anos} years`,
 ].join('  ·  ');
 
 /* ── 2. O desenho ──────────────────────────────────────────────
